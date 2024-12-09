@@ -15,7 +15,7 @@ class DetailScreen extends StatelessWidget {
         foregroundColor: Theme.of(context).hintColor,
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           // Product Image
           Container(
@@ -24,12 +24,12 @@ class DetailScreen extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(product.image),
-                fit: BoxFit.cover, // Ensures the image covers the container proportionally
+                fit: BoxFit.fitHeight, // Ensures the image covers the container proportionally
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
