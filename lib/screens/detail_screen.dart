@@ -65,11 +65,14 @@ class DetailScreen extends StatelessWidget {
           Center(
             child: ElevatedButton(
               onPressed: () {
-                // Directly navigate to CheckoutScreen
+                // Pass product details to CheckoutScreen
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const CheckoutScreen(),
+                    builder: (context) => CheckoutScreen(
+                      bookName: product.title, // Pass the book name
+                      bookPrice: product.price, // Pass the book price
+                    ),
                   ),
                 );
               },
