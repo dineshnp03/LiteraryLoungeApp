@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:literary_lounge_app/models/books.dart';
+import 'package:literary_lounge_app/screens/checkout_screen.dart'; // Directly import the CheckoutScreen
 
 class DetailScreen extends StatelessWidget {
   final Book product;
@@ -15,21 +16,23 @@ class DetailScreen extends StatelessWidget {
         foregroundColor: Theme.of(context).hintColor,
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // Product Image
-          Container(
-            height: MediaQuery.of(context).size.height * 0.4, // 40% of screen height
+          Padding(
+          padding: const EdgeInsets.all(16.0), // Adjust padding as needed
+          child: Container(
+            height: MediaQuery.of(context).size.height * 0.4,
             width: double.infinity,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(product.image),
-                fit: BoxFit.cover, // Ensures the image covers the container proportionally
+                fit: BoxFit.fitHeight,
               ),
             ),
           ),
+          ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -37,7 +40,7 @@ class DetailScreen extends StatelessWidget {
                 Text(
                   product.title,
                   style: const TextStyle(
-                    fontSize: 24, // Bigger font size for the book name
+                    fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -64,7 +67,16 @@ class DetailScreen extends StatelessWidget {
           Center(
             child: ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/checkout');
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CheckoutScreen(
+                      bookName: product.title,
+                      bookPrice: product.price,
+                    ),
+                  ),
+                );
               },
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),

@@ -14,12 +14,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'The Literary Lounge',
       theme: ThemeData(
-        primaryColor: const Color(0xFF3A8389),
+        primaryColor: const Color(0xFF1a1515),
         hintColor: const Color(0xFF50E3C2),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             foregroundColor: Colors.white,
-            backgroundColor: const Color(0xFF3A8389), // Text color
+            backgroundColor: const Color(0xFF1a1515),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
