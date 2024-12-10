@@ -9,7 +9,7 @@ List<Book> books = [
     image: 'assets/images/1984.jpg',
   ),
   Book(
-    title: 'Anne Frank: The Diary of a Young Girl',
+    title: 'Anne Frank',
     description: 'The story of a young girl during World War II.',
     longDescription: 'Discover the poignant and heartfelt diary of Anne Frank, chronicling her life in hiding during the Holocaust.',
     price: 12.99,
@@ -107,7 +107,7 @@ List<Book> books = [
     image: 'assets/images/kill_a_mockingbird.jpg',
   ),
   Book(
-    title: 'The Left Hand of Darkness',
+    title: 'Hand of Darkness',
     description: 'A science fiction novel by Ursula K. Le Guin.',
     longDescription: 'Journey to a distant planet where gender roles are fluid, exploring themes of identity and culture.',
     price: 15.99,

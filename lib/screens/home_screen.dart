@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:literary_lounge_app/screens/product_screen.dart';
 
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
