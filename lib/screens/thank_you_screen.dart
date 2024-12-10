@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart'; // Import Lottie package
 
 class ThankYouScreen extends StatelessWidget {
   const ThankYouScreen({super.key});
@@ -18,11 +19,12 @@ class ThankYouScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Success Icon
-              Icon(
-                Icons.check_circle_outline,
-                color: Colors.green,
-                size: 100,
+              // Lottie Animation for Success Tick
+              Lottie.asset(
+                'assets/splash/animate-tick.json', // Path to the animation file
+                width: 200, // Adjust the size of the animation
+                height: 200,
+                repeat: false, // Stops animation after one play
               ),
               const SizedBox(height: 24),
               // Success Message
