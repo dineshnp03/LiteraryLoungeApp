@@ -18,16 +18,18 @@ class DetailScreen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // Product Image
-          Container(
-            height: MediaQuery.of(context).size.height * 0.4, // 40% of screen height
+          Padding(
+          padding: const EdgeInsets.all(16.0), // Adjust padding as needed
+          child: Container(
+            height: MediaQuery.of(context).size.height * 0.4,
             width: double.infinity,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(product.image),
-                fit: BoxFit.fitHeight, // Ensures the image covers the container proportionally
+                fit: BoxFit.fitHeight,
               ),
             ),
+          ),
           ),
           Padding(
             padding: const EdgeInsets.all(16.0),
@@ -38,7 +40,7 @@ class DetailScreen extends StatelessWidget {
                 Text(
                   product.title,
                   style: const TextStyle(
-                    fontSize: 24, // Bigger font size for the book name
+                    fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -65,13 +67,13 @@ class DetailScreen extends StatelessWidget {
           Center(
             child: ElevatedButton(
               onPressed: () {
-                // Pass product details to CheckoutScreen
+
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => CheckoutScreen(
-                      bookName: product.title, // Pass the book name
-                      bookPrice: product.price, // Pass the book price
+                      bookName: product.title,
+                      bookPrice: product.price,
                     ),
                   ),
                 );

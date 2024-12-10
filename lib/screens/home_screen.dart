@@ -11,11 +11,16 @@ class HomeScreen extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color(0xFFdad4ec), Color(0xFFf3e7e9)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
+          image: DecorationImage(
+            image: AssetImage("assets/images/background-image.jpeg"),
+            fit: BoxFit.fitHeight,
           ),
+
+          // gradient: LinearGradient(
+          //   colors: [Color(0xFFdad4ec), Color(0xFFf3e7e9)],
+          //   begin: Alignment.topLeft,
+          //   end: Alignment.bottomRight,
+          // ),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

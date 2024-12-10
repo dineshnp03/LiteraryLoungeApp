@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:literary_lounge_app/screens/product_screen.dart';
 import 'package:lottie/lottie.dart'; // Import Lottie package
 
 class ThankYouScreen extends StatelessWidget {
@@ -11,7 +12,7 @@ class ThankYouScreen extends StatelessWidget {
         title: const Text('Order Confirmation'),
         backgroundColor: Theme.of(context).primaryColor,
         foregroundColor: Theme.of(context).hintColor,
-        automaticallyImplyLeading: false, // Removes the back button
+        automaticallyImplyLeading: false,
       ),
       body: Center(
         child: Padding(
@@ -19,12 +20,12 @@ class ThankYouScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Lottie Animation for Success Tick
+
               Lottie.asset(
-                'assets/splash/animate-tick.json', // Path to the animation file
-                width: 200, // Adjust the size of the animation
+                'assets/splash/animate-tick.json',
+                width: 200,
                 height: 200,
-                repeat: false, // Stops animation after one play
+                repeat: false,
               ),
               const SizedBox(height: 24),
               // Success Message
@@ -44,8 +45,8 @@ class ThankYouScreen extends StatelessWidget {
               // Back to Home Button
               ElevatedButton(
                 onPressed: () {
-                  // Navigate back to home and remove all previous routes
-                  Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
+
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ProductScreen(key: key,)));
                 },
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),

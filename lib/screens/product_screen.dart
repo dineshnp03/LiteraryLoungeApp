@@ -16,9 +16,9 @@ class ProductScreen extends StatelessWidget {
       body: GridView.builder(
         padding: const EdgeInsets.all(16),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, // Number of items per row
-          crossAxisSpacing: 16, // Horizontal spacing between grid items
-          mainAxisSpacing: 16, // Vertical spacing between grid items
+          crossAxisCount: 2,
+          crossAxisSpacing: 16,
+          mainAxisSpacing: 16,
           childAspectRatio: 0.5,
         ),
         itemCount: books.length,

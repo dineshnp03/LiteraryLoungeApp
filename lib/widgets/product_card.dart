@@ -59,7 +59,7 @@ class ProductCard extends StatelessWidget {
                         color: Theme.of(context).primaryColor,
                       ),
                     ),
-                    const Spacer(), // Push the button to the bottom
+                    const Spacer(),
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
