@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:literary_lounge_app/models/books.dart';
+import 'package:literary_lounge_app/screens/checkout_screen.dart'; // Directly import the CheckoutScreen
 
 class DetailScreen extends StatelessWidget {
   final Book product;
@@ -64,7 +65,13 @@ class DetailScreen extends StatelessWidget {
           Center(
             child: ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/checkout');
+                // Directly navigate to CheckoutScreen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CheckoutScreen(),
+                  ),
+                );
               },
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
