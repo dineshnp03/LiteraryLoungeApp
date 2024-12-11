@@ -12,6 +12,7 @@ class ProductScreen extends StatelessWidget {
         title: const Text('The Literary Lounge'),
         backgroundColor: Theme.of(context).primaryColor,
         foregroundColor: Theme.of(context).hintColor,
+        automaticallyImplyLeading: false,
       ),
       body: GridView.builder(
         padding: const EdgeInsets.all(16),

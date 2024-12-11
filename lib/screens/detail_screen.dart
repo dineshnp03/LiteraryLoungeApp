@@ -19,7 +19,7 @@ class DetailScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(
-          padding: const EdgeInsets.all(16.0), // Adjust padding as needed
+          padding: const EdgeInsets.all(16.0),
           child: Container(
             height: MediaQuery.of(context).size.height * 0.4,
             width: double.infinity,
